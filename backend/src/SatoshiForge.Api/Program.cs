@@ -10,6 +10,8 @@ builder.Services.AddProblemDetailsConfiguration();
 builder.Services.AddApiVersioningConfiguration();
 builder.Services.AddOpenApiConfiguration();
 
+builder.Services.AddSwaggerConfiguration();
+
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
@@ -21,6 +23,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseStatusCodePages();
 app.UseHttpsRedirection();
+
+app.UseSwaggerConfiguration();
 
 app.MapHealthChecks("/health");
 app.MapControllers();

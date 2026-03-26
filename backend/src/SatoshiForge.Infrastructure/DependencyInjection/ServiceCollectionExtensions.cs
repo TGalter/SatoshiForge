@@ -5,6 +5,12 @@ using SatoshiForge.Infrastructure.Persistence;
 using SatoshiForge.Application.Abstractions.Dispatching;
 using SatoshiForge.Infrastructure.Dispatching;
 using FluentValidation;
+using SatoshiForge.Infrastructure.Persistence.Repositories;
+using SatoshiForge.Application.Abstractions.Persistence;
+using SatoshiForge.Application.Abstractions.CQRS;
+using SatoshiForge.Application.Features.Auth.Commands.RegisterUser;
+using SatoshiForge.Application.Abstractions.Auth;
+using SatoshiForge.Infrastructure.Auth;
 
 namespace SatoshiForge.Infrastructure.DependencyInjection;
 
@@ -21,6 +27,13 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<ICommandDispatcher, CommandDispatcher>();
         services.AddScoped<IQueryDispatcher, QueryDispatcher>();
+        services.AddScoped<IUserRepository, UserRepository>();
+
+        services.AddScoped<ICommandHandler<RegisterUserCommand, RegisterUserResponse>, RegisterUserCommandHandler>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+        services.AddScoped<IPasswordHasher, PasswordHasher>();
+        services.AddScoped<ICommandHandler<RegisterUserCommand, RegisterUserResponse>, RegisterUserCommandHandler>();
 
         services.AddValidatorsFromAssembly(
             typeof(SatoshiForge.Application.Abstractions.CQRS.ICommand<>).Assembly);
