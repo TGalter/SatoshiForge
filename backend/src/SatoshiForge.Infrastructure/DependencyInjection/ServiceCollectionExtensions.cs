@@ -11,6 +11,9 @@ using SatoshiForge.Application.Abstractions.CQRS;
 using SatoshiForge.Application.Features.Auth.Commands.RegisterUser;
 using SatoshiForge.Application.Abstractions.Auth;
 using SatoshiForge.Infrastructure.Auth;
+using SatoshiForge.Infrastructure.Auth.Options;
+using SatoshiForge.Application.Features.Auth.Commands.LoginUser;
+using SatoshiForge.Application.Features.Auth.Queries.GetCurrentUser;
 
 namespace SatoshiForge.Infrastructure.DependencyInjection;
 
@@ -34,6 +37,15 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<IPasswordHasher, PasswordHasher>();
         services.AddScoped<ICommandHandler<RegisterUserCommand, RegisterUserResponse>, RegisterUserCommandHandler>();
+
+        services.Configure<JwtOptions>(
+            configuration.GetSection(JwtOptions.SectionName));
+
+        services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+
+        services.AddScoped<ICommandHandler<LoginUserCommand, LoginUserResponse>, LoginUserCommandHandler>();
+
+        services.AddScoped<IQueryHandler<GetCurrentUserQuery, GetCurrentUserResponse>, GetCurrentUserQueryHandler>();
 
         services.AddValidatorsFromAssembly(
             typeof(SatoshiForge.Application.Abstractions.CQRS.ICommand<>).Assembly);
