@@ -1,0 +1,16 @@
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/bin/Debug/net10.0/SatoshiForge.Application.deps.json
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/bin/Debug/net10.0/SatoshiForge.Application.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/bin/Debug/net10.0/SatoshiForge.Application.pdb
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/bin/Debug/net10.0/SatoshiForge.Domain.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/bin/Debug/net10.0/SatoshiForge.Domain.pdb
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiForge.Application.csproj.AssemblyReference.cache
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiForge.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiForge.Application.AssemblyInfoInputs.cache
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiForge.Application.AssemblyInfo.cs
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiForge.Application.csproj.CoreCompileInputs.cache
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiForge.Application.sourcelink.json
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiF.5073B9E6.Up2Date
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiForge.Application.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/refint/SatoshiForge.Application.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/SatoshiForge.Application.pdb
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Application/obj/Debug/net10.0/ref/SatoshiForge.Application.dll

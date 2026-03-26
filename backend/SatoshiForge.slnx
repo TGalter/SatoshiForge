@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SatoshiForge.Api/SatoshiForge.Api.csproj" />
+    <Project Path="src/SatoshiForge.Application/SatoshiForge.Application.csproj" />
+    <Project Path="src/SatoshiForge.Domain/SatoshiForge.Domain.csproj" />
+    <Project Path="src/SatoshiForge.Infrastructure/SatoshiForge.Infrastructure.csproj" />
+    <Project Path="src/SatoshiForge.Shared/SatoshiForge.Shared.csproj" />
+  </Folder>
+</Solution>
