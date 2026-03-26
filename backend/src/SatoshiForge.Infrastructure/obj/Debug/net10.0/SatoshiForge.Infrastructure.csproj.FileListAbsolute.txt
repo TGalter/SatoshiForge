@@ -16,3 +16,7 @@
 /home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Infrastructure/obj/Debug/net10.0/refint/SatoshiForge.Infrastructure.dll
 /home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Infrastructure/obj/Debug/net10.0/SatoshiForge.Infrastructure.pdb
 /home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Infrastructure/obj/Debug/net10.0/ref/SatoshiForge.Infrastructure.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Infrastructure/bin/Debug/net10.0/SatoshiForge.Infrastructure.runtimeconfig.json
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Infrastructure/bin/Debug/net10.0/SatoshiForge.Shared.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Infrastructure/bin/Debug/net10.0/SatoshiForge.Shared.pdb
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Infrastructure/obj/Debug/net10.0/SatoshiForge.Infrastructure.genruntimeconfig.cache

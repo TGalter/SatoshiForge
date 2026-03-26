@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SatoshiForge.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a0d0e205b10d7dd6e34c32e0a06163945e99cb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d371f920b7b939e48773959c1d3ee92811a80889")]
 [assembly: System.Reflection.AssemblyProductAttribute("SatoshiForge.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SatoshiForge.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -47,3 +47,9 @@
 /home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/Asp.Versioning.Mvc.ApiExplorer.dll
 /home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/SatoshiForge.Shared.dll
 /home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/SatoshiForge.Shared.pdb
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/Npgsql.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Api/bin/Debug/net10.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

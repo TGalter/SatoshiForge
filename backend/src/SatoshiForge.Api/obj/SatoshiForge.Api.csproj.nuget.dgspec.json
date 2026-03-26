@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[10.0.5, )"
             },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[10.1.7, )"
@@ -1213,6 +1217,9 @@
               },
               "/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/SatoshiForge.Domain.csproj": {
                 "projectPath": "/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/SatoshiForge.Domain.csproj"
+              },
+              "/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Shared/SatoshiForge.Shared.csproj": {
+                "projectPath": "/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Shared/SatoshiForge.Shared.csproj"
               }
             }
           }
@@ -1232,6 +1239,38 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
