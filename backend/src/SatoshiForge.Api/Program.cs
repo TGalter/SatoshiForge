@@ -1,4 +1,5 @@
 using SatoshiForge.Api.Extensions;
+using SatoshiForge.Infrastructure.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,8 @@ builder.Services.AddHealthChecks();
 builder.Services.AddProblemDetailsConfiguration();
 builder.Services.AddApiVersioningConfiguration();
 builder.Services.AddOpenApiConfiguration();
+
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
