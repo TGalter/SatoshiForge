@@ -136,3 +136,8 @@ Princípios adotados:
                           │ Prometheus / Grafana     │
                           │ Loki / Tempo             │
                           └──────────────────────────┘
+
+
+## License
+
+This project is licensed under the MIT License.
