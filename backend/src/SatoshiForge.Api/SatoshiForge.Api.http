@@ -1,0 +1,6 @@
+@SatoshiForge.Api_HostAddress = http://localhost:5148
+
+GET {{SatoshiForge.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

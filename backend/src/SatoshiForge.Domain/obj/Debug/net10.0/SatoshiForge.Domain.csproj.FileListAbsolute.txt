@@ -1,0 +1,12 @@
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/bin/Debug/net10.0/SatoshiForge.Domain.deps.json
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/bin/Debug/net10.0/SatoshiForge.Domain.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/bin/Debug/net10.0/SatoshiForge.Domain.pdb
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/SatoshiForge.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/SatoshiForge.Domain.AssemblyInfoInputs.cache
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/SatoshiForge.Domain.AssemblyInfo.cs
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/SatoshiForge.Domain.csproj.CoreCompileInputs.cache
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/SatoshiForge.Domain.sourcelink.json
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/SatoshiForge.Domain.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/refint/SatoshiForge.Domain.dll
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/SatoshiForge.Domain.pdb
+/home/hider/Documents/Git/SatoshiForge/backend/src/SatoshiForge.Domain/obj/Debug/net10.0/ref/SatoshiForge.Domain.dll
