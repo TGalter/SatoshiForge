@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SatoshiForge.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d371f920b7b939e48773959c1d3ee92811a80889")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a118d4332e70996d3c108ef5feef26c628c23ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("SatoshiForge.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SatoshiForge.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
