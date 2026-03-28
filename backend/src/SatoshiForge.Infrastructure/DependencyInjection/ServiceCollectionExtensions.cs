@@ -42,16 +42,16 @@ public static class ServiceCollectionExtensions
         }
 
         services
-    .AddOptions<ObservabilityOptions>()
-    .Bind(configuration.GetSection(ObservabilityOptions.SectionName))
-    .ValidateDataAnnotations()
-    .Validate(
-        options => Uri.TryCreate(options.Otlp.Endpoint, UriKind.Absolute, out _),
-        "Observability:Otlp:Endpoint deve ser uma URI absoluta válida.")
-    .Validate(
-        options => options.Otlp.Protocol is "grpc" or "http/protobuf",
-        "Observability:Otlp:Protocol deve ser 'grpc' ou 'http/protobuf'.")
-    .ValidateOnStart();
+        .AddOptions<ObservabilityOptions>()
+        .Bind(configuration.GetSection(ObservabilityOptions.SectionName))
+        .ValidateDataAnnotations()
+        .Validate(
+            options => Uri.TryCreate(options.Otlp.Endpoint, UriKind.Absolute, out _),
+            "Observability:Otlp:Endpoint deve ser uma URI absoluta válida.")
+        .Validate(
+            options => options.Otlp.Protocol is "grpc" or "http/protobuf",
+            "Observability:Otlp:Protocol deve ser 'grpc' ou 'http/protobuf'.")
+        .ValidateOnStart();
 
         var observabilityOptions = configuration
             .GetRequiredSection(ObservabilityOptions.SectionName)
@@ -129,6 +129,24 @@ public static class ServiceCollectionExtensions
             });
         }
 
+        if (observabilityOptions.EnableTracing)
+        {
+            openTelemetry.WithTracing(tracing =>
+            {
+                tracing
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddOtlpExporter(exporter =>
+                    {
+                        exporter.Endpoint = new Uri(observabilityOptions.Otlp.Endpoint);
+                        exporter.Protocol = observabilityOptions.Otlp.Protocol switch
+                        {
+                            "http/protobuf" => OtlpExportProtocol.HttpProtobuf,
+                            _ => OtlpExportProtocol.Grpc
+                        };
+                    });
+            });
+        }
         services.AddSingleton<IAuthMetrics, AuthMetrics>();
 
         services.AddScoped<ICommandDispatcher, CommandDispatcher>();

@@ -12,6 +12,8 @@ public sealed class ObservabilityOptions
     public bool EnableMetrics { get; init; } = true;
 
     public bool EnableTracing { get; init; } = true;
+    
+    public bool EnableLogs { get; init; } = true;
 
     public bool EnableStructuredLogging { get; init; } = true;
 

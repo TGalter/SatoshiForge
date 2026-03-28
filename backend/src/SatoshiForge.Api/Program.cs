@@ -2,11 +2,10 @@ using SatoshiForge.Api.Extensions;
 using SatoshiForge.Api.Identity;
 using SatoshiForge.Application.Abstractions.Identity;
 using SatoshiForge.Infrastructure.DependencyInjection;
-using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.UseInfrastructureLogging(builder.Configuration);
+builder.AddInfrastructureLogging();
 
 builder.Services.AddControllers();
 builder.Services.AddHealthChecks();
@@ -27,7 +26,6 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler();
 }
 
-app.UseSerilogRequestLogging();
 app.UseStatusCodePages();
 app.UseHttpsRedirection();
 app.UseSwaggerConfiguration();
