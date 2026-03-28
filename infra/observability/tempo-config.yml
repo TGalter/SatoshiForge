@@ -6,9 +6,17 @@ distributor:
     otlp:
       protocols:
         grpc:
+          endpoint: 0.0.0.0:4317
         http:
+          endpoint: 0.0.0.0:4318
 
 ingester:
+  # Garante que os dados sejam escritos no disco periodicamente
+  lifecycler:
+    ring:
+      kvstore:
+        store: inmemory
+      replication_factor: 1
   max_block_duration: 5m
 
 compactor:
@@ -19,12 +27,6 @@ storage:
   trace:
     backend: local
     local:
-      path: /tmp/tempo/traces
+      path: /var/tempo/traces # Alterado de /tmp para evitar limpeza do SO
     wal:
-      path: /tmp/tempo/wal
-
-metrics_generator:
-  registry:
-    external_labels:
-      source: tempo
-      cluster: docker-compose
+      path: /var/tempo/wal   # Write Ahead Log para segurança dos dados

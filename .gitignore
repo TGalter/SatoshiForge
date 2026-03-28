@@ -101,3 +101,8 @@ artifacts/
 # Keep placeholder files
 # -----------------------
 !.gitkeep
+
+
+data/
+*.db
+*.waldata/

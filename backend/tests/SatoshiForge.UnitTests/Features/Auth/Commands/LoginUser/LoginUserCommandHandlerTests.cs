@@ -14,7 +14,6 @@ public sealed class LoginUserCommandHandlerTests
     private readonly IUserRepository _userRepository = Substitute.For<IUserRepository>();
     private readonly IPasswordHasher _passwordHasher = Substitute.For<IPasswordHasher>();
     private readonly IJwtTokenGenerator _jwtTokenGenerator = Substitute.For<IJwtTokenGenerator>();
-
     private readonly ILogger<LoginUserCommandHandler> _logger = Substitute.For<ILogger<LoginUserCommandHandler>>();
 
     [Fact]
