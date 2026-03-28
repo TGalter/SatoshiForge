@@ -2,8 +2,11 @@ using SatoshiForge.Api.Extensions;
 using SatoshiForge.Api.Identity;
 using SatoshiForge.Application.Abstractions.Identity;
 using SatoshiForge.Infrastructure.DependencyInjection;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseInfrastructureLogging(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddHealthChecks();
@@ -13,11 +16,8 @@ builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 builder.Services.AddProblemDetailsConfiguration();
 builder.Services.AddApiVersioningConfiguration();
 builder.Services.AddOpenApiConfiguration();
-
 builder.Services.AddSwaggerConfiguration();
-
 builder.Services.AddInfrastructure(builder.Configuration, builder.Environment);
-
 builder.Services.AddAuthenticationConfiguration(builder.Configuration);
 
 var app = builder.Build();
@@ -27,9 +27,9 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler();
 }
 
+app.UseSerilogRequestLogging();
 app.UseStatusCodePages();
 app.UseHttpsRedirection();
-
 app.UseSwaggerConfiguration();
 
 app.MapHealthChecks("/health");
