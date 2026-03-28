@@ -6,4 +6,8 @@
     <Project Path="src/SatoshiForge.Infrastructure/SatoshiForge.Infrastructure.csproj" />
     <Project Path="src/SatoshiForge.Shared/SatoshiForge.Shared.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SatoshiForge.IntegrationTests/SatoshiForge.IntegrationTests.csproj" />
+    <Project Path="tests/SatoshiForge.UnitTests/SatoshiForge.UnitTests.csproj" />
+  </Folder>
 </Solution>

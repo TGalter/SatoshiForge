@@ -1,0 +1,5 @@
+namespace SatoshiForge.Api.Contracts.Auth;
+
+public sealed record LoginUserRequest(
+    string Email,
+    string Password);

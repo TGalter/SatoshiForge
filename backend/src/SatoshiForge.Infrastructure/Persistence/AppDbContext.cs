@@ -3,30 +3,13 @@ using SatoshiForge.Domain.Entities;
 
 namespace SatoshiForge.Infrastructure.Persistence;
 
-public sealed class AppDbContext : DbContext
+public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    {
-    }
-
-    public DbSet<SystemInfo> SystemInfos => Set<SystemInfo>();
+    public DbSet<User> Users => Set<User>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         base.OnModelCreating(modelBuilder);
-
-        modelBuilder.Entity<SystemInfo>(entity =>
-        {
-            entity.ToTable("system_infos");
-
-            entity.HasKey(x => x.Id);
-
-            entity.Property(x => x.Name)
-                .IsRequired()
-                .HasMaxLength(100);
-
-            entity.Property(x => x.CreatedAtUtc)
-                .IsRequired();
-        });
     }
 }
