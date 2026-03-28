@@ -14,6 +14,7 @@ using SatoshiForge.Infrastructure.Auth;
 using SatoshiForge.Infrastructure.Auth.Options;
 using SatoshiForge.Application.Features.Auth.Commands.LoginUser;
 using SatoshiForge.Application.Features.Auth.Queries.GetCurrentUser;
+using Microsoft.Extensions.Hosting;
 
 namespace SatoshiForge.Infrastructure.DependencyInjection;
 
@@ -21,12 +22,16 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddInfrastructure(
         this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration, IHostEnvironment? environment)
     {
-        var connectionString = configuration.GetConnectionString("DefaultConnection");
+        if (environment?.IsEnvironment("Testing") != true)
+        {
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-        services.AddDbContext<AppDbContext>(options =>
-            options.UseNpgsql(connectionString));
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseNpgsql(connectionString));
+        }
+
 
         services.AddScoped<ICommandDispatcher, CommandDispatcher>();
         services.AddScoped<IQueryDispatcher, QueryDispatcher>();

@@ -16,7 +16,7 @@ builder.Services.AddOpenApiConfiguration();
 
 builder.Services.AddSwaggerConfiguration();
 
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration, builder.Environment);
 
 builder.Services.AddAuthenticationConfiguration(builder.Configuration);
 
@@ -39,3 +39,5 @@ app.MapControllers();
 app.MapOpenApiConfiguration();
 
 app.Run();
+
+public partial class Program;
