@@ -1,0 +1,19 @@
+<section class="me-page">
+  <div class="me-card">
+    <h1>Minha conta</h1>
+
+    @if (isLoading()) {
+      <p>Carregando...</p>
+    } @else if (errorMessage()) {
+      <p class="error-message">{{ errorMessage() }}</p>
+    } @else if (user()) {
+      <div class="user-info">
+        <p><strong>ID:</strong> {{ user()?.id }}</p>
+        <p><strong>E-mail:</strong> {{ user()?.email }}</p>
+        <p><strong>Role:</strong> {{ user()?.role }}</p>
+      </div>
+
+      <button type="button" (click)="logout()">Sair</button>
+    }
+  </div>
+</section>
